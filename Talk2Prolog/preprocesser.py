@@ -2,7 +2,6 @@ import contractions
 import string
 import coref_handler
 import spacy
-import claucy
 import re
 import numerizer
 
