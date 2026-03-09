@@ -17,7 +17,7 @@ def end_timing():
 # === LIBRARY IMPORTS ===
 import sys
 import prolog_handler
-import preprocesser
+import preprocessor
 import semantic_parser
 
 # === CONFIGURATION FLAGS ===
@@ -41,9 +41,9 @@ solve_coref = "stanford" # default "manual" (can also be "stanford", but sometim
 try:
     text = input("Enter a sentence: ")
     start_time = time.perf_counter()
-    (text, query) = preprocesser.to_sentence_form(text)
-    text = preprocesser.canonize_sentence(text, word2num=word2num, solve_coref=solve_coref, nlp=nlp)
-    substrings = preprocesser.sentence_to_clauses(text, nlp=nlp) # sentence clauses and conjunctions
+    (text, query) = preprocessor.to_sentence_form(text)
+    text = preprocessor.canonize_sentence(text, word2num=word2num, solve_coref=solve_coref, nlp=nlp)
+    substrings = preprocessor.sentence_to_clauses(text, nlp=nlp) # sentence clauses and conjunctions
 except:
     print("An error occurred during sentence pre-processing.")
     end_timing()
@@ -71,7 +71,7 @@ try:
             continue
 
         # Clause (treated as a sentence)
-        (normalized_clause, _) = preprocesser.to_sentence_form(substring)
+        (normalized_clause, _) = preprocessor.to_sentence_form(substring)
 
         # Term from clause (flags in new doc)
         semantic_parser.new_doc(normalized_clause)
