@@ -2,7 +2,7 @@
 
 Talk2Prolog is a software for translating natural language into Prolog.
 
-# Description
+## Description
 
 Currently, large language models (LLMs) and generative artificial intelligence (GenAI) are among the principal approaches used for a range of tasks, including translating natural language into a formal representation. 
 
