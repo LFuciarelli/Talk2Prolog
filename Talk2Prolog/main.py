@@ -34,7 +34,7 @@ adj_as_term = True # default True
 
 # Pre-processing flags
 word2num = True # default True (if False, numerical words will not be treated as numeric values)
-solve_coref = "stanford" # default "manual" (can also be "stanford", but sometimes coreference resolution breaks the original sentence)
+solve_coref = "manual" # default "manual" (can also be "stanford", but sometimes coreference resolution breaks the original sentence)
 
 # === INPUT SENTENCE PRE-PROCESSING === 
 
